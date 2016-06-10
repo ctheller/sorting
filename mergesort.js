@@ -9,7 +9,8 @@ var split = function (arr) {
 	}
 }
 
-
+//The below is NOT OPTIMIZED. Using Shift makes it much slower. 
+//Better to implement by keeping track of "starting index" of each original array.
 var merge = function (arr, arr2) {
 	var new_array = [];
 	while (arr.length && arr2.length){		
@@ -40,3 +41,5 @@ var mergeSort = function(array){
 	else
 		return merge(mergeSort(split(array)[0]),(mergeSort(split(array)[1])));
 }
+
+

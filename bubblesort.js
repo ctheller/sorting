@@ -6,9 +6,6 @@ var bubbleSort = function(array){
 			if (array[j]>array[j+1]){
 				swap(array, j, j+1)
 				swapCounter++;
-				// var holder = array[j+1];
-				// array[j+1] = array[j];
-				// array[j] = holder;
 			}
 		}
 		if(swapCounter === 0) return array;
