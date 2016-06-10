@@ -13,5 +13,15 @@ describe('Merge Sort', function(){
 
   it('sorts an array using the split and merge functions recursively', function(){
   	expect(mergeSort([2,5,2,8,3,1])).toEqual([1,2,2,3,5,8]);
+    expect(mergeSort([])).toEqual([]);
+    expect(mergeSort([1,2,3,4,5])).toEqual([1,2,3,4,5]);
+    expect(mergeSort([5,4,3])).toEqual([3,4,5]);
   });
+
+  it('calls itself recursively', function(){
+    spyOn(window, 'mergeSort').and.callThrough();
+    mergeSort([3,2,1,4]);
+    expect(mergeSort.calls.count()).toEqual(7);
+  })
+
 });

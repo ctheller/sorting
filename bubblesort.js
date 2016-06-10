@@ -10,8 +10,8 @@ var bubbleSort = function(array){
 				// array[j+1] = array[j];
 				// array[j] = holder;
 			}
-		if(swapCounter == 0) return array;
 		}
+		if(swapCounter === 0) return array;
 	}
 	return array;
 };
